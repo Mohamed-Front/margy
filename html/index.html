@@ -183,11 +183,11 @@ opacity: 0.9;
          </div>
 <!-- Logo -->
 <div class="logo hover"></div>
-<div class="page-zoom zoom magnetic hover" data-tooltip="عرض جميع الصفحات" data-position="bottom">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+<!-- Icon "Full Menu" -->
+       <div class="page-zoom zoom magnetic hover" data-tooltip="عرض جميع الصفحات" data-position="bottom">
+<span></span>
+<span></span>
+<span></span>
 </div>
 <!-- Page Transition List -->
 <div class="animation-wrap hover" data-tooltip="انتقال الصفحة" data-position="right">
@@ -489,10 +489,7 @@ placeholder="بريد إلكتروني بديل (اختياري)">
 <input type="text" name="instagram" id="instagram" class="form-control hover cursor-pen"
 placeholder="حساب إنستغرام (اختياري)">
 </div>
-<div class="col-lg-6 col-md-6 col-sm-12">
-<input type="tel" name="whatsapp" id="whatsapp" class="form-control hover cursor-pen"
-placeholder="رقم واتساب (اختياري)">
-</div>
+
 </div>
 <!-- Adventure/Teamwork & Chronic Diseases -->
 <div class="row">
@@ -607,7 +604,7 @@ chronic_diseases: document.getElementById('chronic_diseases').value,
 foods: document.getElementById('foods').value
 };
 // Send data to API
-fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/registration-no-auth', {
+fetch('https://xlmgcacskp.sharedwithexpose.com/api/registration-no-auth', {
 method: 'POST',
 headers: {
 'Content-Type': 'application/json',
@@ -641,7 +638,7 @@ console.error('Error:', error);
 
 // Fetch and display banner data from your API
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/home/banners')
+    fetch('https://xlmgcacskp.sharedwithexpose.com/api/home/banners')
         .then(response => {
             if (!response.ok) throw new Error('Network error');
             return response.json();
@@ -750,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch and display products
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/home/products')
+    fetch('https://xlmgcacskp.sharedwithexpose.com/api/home/products')
         .then(response => {
             if (!response.ok) throw new Error('Network error');
             return response.json();
@@ -832,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch and display team data
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/home/team')
+    fetch('https://xlmgcacskp.sharedwithexpose.com/api/home/team')
         .then(response => {
             if (!response.ok) throw new Error('Network error');
             return response.json();
@@ -875,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch and display games data
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/home/games')
+    fetch('https://xlmgcacskp.sharedwithexpose.com/api/home/games')
         .then(response => {
             if (!response.ok) throw new Error('Network error');
             return response.json();
@@ -920,7 +917,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Fetch and display adventures (posts) data
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://o2xmpyv6lh.sharedwithexpose.com/api/home/posts')
+    fetch('https://xlmgcacskp.sharedwithexpose.com/api/home/posts')
         .then(response => {
             if (!response.ok) throw new Error('Network error');
             return response.json();
@@ -994,127 +991,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 </body>
-<style>
-  
-.banner-description {
-font-size: 18px;
-margin-top: 10px;
-opacity: 0.9;
-}
-.products-items .item figure img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-.products-items .item figcaption {
-    text-align: right;
-    padding: 15px;
-}
-.products-items .item figcaption h3,
-.products-items .item figcaption p {
-    margin-bottom: 10px;
-}
-.team-section, .games-section {
-    margin-top: 50px;
-}
-.team-member, .game-item {
-    text-align: center;
-    margin-bottom: 30px;
-}
-.team-member img, .game-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-.adventure-item {
-    margin-bottom: 40px;
-    text-align: right;
-}
-.adventure-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
 
-/* تعديل: جعل زر Full Menu في منتصف الشاشة */
-.page-zoom {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 9999 !important;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.page-zoom:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.page-zoom span {
-    width: 8px;
-    height: 8px;
-    background: #000;
-    border-radius: 50%;
-    margin: 0 4px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.page-zoom:hover span {
-    background: #333;
-    transform: scale(1.2);
-}
-
-/* تعديل: استبدال اللوجو بصورة مخصصة */
-.logo {
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    z-index: 999;
-    width: 120px;
-    height: 120px;
-    background-image: url('./logo.png') !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
-}
-
-.logo:hover {
-    transform: scale(1.08);
-}
-
-@media (max-width: 768px) {
-    .logo {
-        width: 90px;
-        height: 90px;
-        top: 20px;
-        left: 20px;
-    }
-    .page-zoom {
-        width: 60px;
-        height: 60px;
-        padding: 15px;
-    }
-}
-</style>
 </html>
